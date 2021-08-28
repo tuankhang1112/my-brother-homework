@@ -1,0 +1,65 @@
+#ten va so luong sach
+
+ten = input("Please enter your name:  ")
+so_luong = int(input("How many books would you like to buy:  "))
+
+#tinh tien
+if so_luong >= 2:
+    print("Hello " + ten +"\nYou buy " + (str(so_luong) ) + ' books')
+    print("One book cost 15000vnd")
+else:
+    print("Hello " + ten + "\nYou buy " + (str(so_luong)) + ' book')
+    print("One book cost 15000vnd")
+tong = so_luong * 15000
+if so_luong >= 2:
+    print((str(so_luong)) + " books cost " +  (str(tong)) + 'vnd')
+else:
+    print((str(so_luong)) + " book cost " + (str(tong)))
+giam_gia = tong - 20000
+if tong >= 200000:
+    print("Because you buy more than 200000 so we will discount 20000vnd so you need to pay " + (str(giam_gia)) + " vnd \nthank you")
+con_thieu = 14 - so_luong
+if tong < 200000 and con_thieu >= 2:
+    print("If you buy " + (str(con_thieu)) + " more books, we will discount 20000vnd for you")
+    hoi = (input("Would you like to buy some more books(yes/no):  "))
+    if hoi == 'yes':
+        y = int(input("How many books would you buy more:  "))
+        so_luong3 = so_luong + y
+        tong2 = so_luong3 * 15000
+        giam_gia2 = tong2 - 20000
+        if tong2 >= 200000:
+            print("Because you buy more than 200000vnd so we will discount 20000vnd so you need to pay \n" + (str(giam_gia2)) + " vnd \nthank you")
+        if tong2 <= 200000:
+            print("Because you buy less than 200000vnd so you need to pay \n" + (str(tong2)) + " vnd \nthank you")
+
+
+    else:
+        print("So you need to pay \n" + (str(tong)) + 'vnd')
+        print('Thank you')
+
+
+
+
+
+else:
+    print("If you buy " + (str(con_thieu)) + " more book, we will discount 20000vnd for you")
+    hoi = input("Would you like to buy some more books(yes/no):  ")
+    if hoi == 'yes':
+        y = int(input("How many books would you buy more:  "))
+        so_luong3 = so_luong + y
+        tong2 = so_luong3 * 15000
+        giam_gia2 = tong2 - 20000
+        if tong2 >= 200000:
+            print("Because you buy more than 200000 so we will discount 20000vnd so you need to pay \n" + (str(giam_gia2)) + " vnd \nthank you")
+
+    else:
+        print("So you need to pay \n" + (str(tong)) + 'vnd')
+        print('Thank you')
+
+
+
+
+
+
+
+
